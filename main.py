@@ -36,7 +36,7 @@
 # print(books)
 import random 
 while True:
-    quiz = ['is circle is cirle?','is it javaScript']
+    quiz = ['is 2 + 2 = 4?','is 2 + 2 = 5?']
     x = random.choice(quiz)
     
     quizInput = input(f"{x} your answer>>> ").lower()
@@ -44,9 +44,9 @@ while True:
         tugri = 'true'
         notugri = 'false'
         
-        if x == 'is circle is cirle?' and quizInput == 'ha' or quizInput == 'ok':
+        if x == 'is 2 + 2 = 4?' and quizInput == 'ha' or quizInput == 'true':
             return tugri
-        elif x == 'is it javaScript' and quizInput == 'yuq' or quizInput == 'false':
+        elif x == 'is 2 + 2 = 5?' and quizInput == 'yuq' or quizInput == 'false':
             return tugri
         else:
             return notugri
