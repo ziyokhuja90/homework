@@ -1,0 +1,58 @@
+# #
+# def myfunc():
+#     """
+#     bu hisoblab beradi
+    
+#     """
+#     num1 = int(input('son1>>> '))
+#     num2 = int(input('son2>>> '))
+#     amal = input('amal>>> ')
+#     if amal == '+':
+#         result = num1 + num2
+#         return result 
+        
+#     elif amal == '-':
+#         result = num1 - num2
+#         return result 
+#     elif amal == '*':
+#         result = num1 * num2
+#         return result 
+#     elif amal == '/':
+#         result = num1 / num2
+
+        
+#         return result
+
+# books = []
+
+# def addBooks(*args):
+#     for i in args:
+#         books.append(i)
+    
+        
+# 91 145 33 15 zikirillo
+
+# addBooks('salom', 'salom2')
+# print(books)
+import random 
+while True:
+    quiz = ['is circle is cirle?','is it javaScript']
+    x = random.choice(quiz)
+    
+    quizInput = input(f"{x} your answer>>> ").lower()
+    def myfunc():
+        tugri = 'true'
+        notugri = 'false'
+        
+        if x == 'is circle is cirle?' and quizInput == 'ha' or quizInput == 'ok':
+            return tugri
+        elif x == 'is it javaScript' and quizInput == 'yuq' or quizInput == 'false':
+            return tugri
+        else:
+            return notugri
+    
+    print(myfunc())
+        
+    
+
+    
