@@ -1,27 +1,30 @@
-
-# from googletrans import Translator
-
-# translator = Translator()
-
-# translator.translate('안녕하세요.')
-# from google_translator_simplified import Translator
-
-# print(Translator.get_translation('pl', 'text for translation', 'en')) #'Tekst do tłumaczenia '
-# Translator.get_translation('de', 'tekst do przetłumaczenia', 'pl') #'Text für die Übersetzung '
-# Translator.get_translation('pl', 'text for translation') #'Tekst do tłumaczenia '
-# Translator.get_translation('de', 'tekst do przetłumaczenia') #'Text für die Übersetzung '
-
-
-
-from translate import Translator
-
-while True:
-    ask = input('qaysi suzni tarjima qilmoqchisiz>>> ')
-    # uz = input('uzbek tiliga tarjima qilmoqchimisiz>>>')
+class Book():
+    def __init__(self):
+        self.kitoblar = {}
+        
+    def addBook(self,name,**kwargs):
+        self.kitoblar[name] = kwargs 
+        
+        
+    def getBook(self,name):
+        return self.kitoblar[name]
     
-    translator= Translator(to_lang="uz")
+    def searchBook(self , name):
+        for name1 in self.kitoblar:
+            if name1 == name:
+                return self.kitoblar[name]
+        
+        # if self.kitoblar[name] in self.kitoblar:
+        #     return self.kitoblar
 
-    translation = translator.translate(ask)
 
-    print(translation)
-    
+h = Book()
+h.addBook('kitob1',muallif='kimdur',narxi=1100,yili=2500)
+h.addBook('kitob2',muallif='kim',narxi=120,yili=1700)
+h.addBook('kitob3',muallif='mual',narxi=2000,yili=1000)
+
+
+print(h.searchBook('kitob1'))
+print(h.searchBook('kitob2'))
+print(h.searchBook('kitob3'))
+
